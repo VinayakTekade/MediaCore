@@ -1,0 +1,25 @@
+{
+  "name": "mediacore",
+  "version": "1.0.0",
+  "description": "Another Social Media platform",
+  "main": "index.js",
+  "dependencies": {
+    "bootstrap": "^4.5.0",
+    "jquery": "^3.5.1",
+    "popper.js": "^1.16.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VinayakTekade/MediaCore.git"
+  },
+  "author": "Vinayak Tekade",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VinayakTekade/MediaCore/issues"
+  },
+  "homepage": "https://github.com/VinayakTekade/MediaCore#readme"
+}

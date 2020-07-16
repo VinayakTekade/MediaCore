@@ -4,15 +4,23 @@
   "description": "Another Social Media platform",
   "main": "index.js",
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.14.0",
     "bootstrap": "^4.5.0",
     "jquery": "^3.5.1",
     "popper.js": "^1.16.1"
   },
   "devDependencies": {
-    "concurrently": "^5.2.0",
-    "lite-server": "^2.5.4",
-    "node-sass": "^4.14.1",
-    "onchange": "^7.0.2"
+    "browser-sync": "^2.26.7",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-flatmap": "^1.0.2",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-rev": "^9.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-uglify": "^3.0.2",
+    "gulp-usemin": "^0.3.30"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

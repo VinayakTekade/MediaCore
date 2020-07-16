@@ -33,13 +33,15 @@ function browsersync(){
         "./src/*.html",
         "./src/css/*.css",
         "./src/img/*.{png, jpg, gif}",
-        "./src/js/*.js"
+        "./src/js/*.js",
+        "./*.*"
     ];
 
     browserSync.init(files, {
         server: {
-            baseDir: "./src/"
-        }
+            baseDir: "./"
+        },
+        startPath: "./src/index.html"
     });
 };
 

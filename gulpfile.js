@@ -1,5 +1,9 @@
 'use-strict'
 
+//Gulp functions 
+const { series, src, dest, watch, parallel } = require('gulp');
+
+//Plugins
 const del = require('del'),
     imagemin = require('gulp-imagemin'),
     sass = require('gulp-sass'),
@@ -11,44 +15,48 @@ const del = require('del'),
     flatmap = require('gulp-flatmap'),
     htmlmin = require('gulp-htmlmin');
 
-const { series, src, dest } = require('gulp');
-
+//Compile scss files
 function sassC(){
-    return src('./css/*.scss')
+    return src('./src/css/*.scss')
             .pipe(sass().on('error',sass.logError))
-            .pipe(dest("./css"))
+            .pipe(dest("./src/css"))
 };
 
+//Auto compile scss files on save
 function watchSass(){
-    watch(['./css/*.scss'], sassCompile);
+    watch('./src/css/*.scss', sassC);
 };
 
+//Auto reload browser on save
 function browsersync(){
     var files = [
-        "./*.html",
-        "./css/*.css",
-        "./img/*.{png, jpg, gif}",
-        "./js/*.js"
+        "./src/*.html",
+        "./src/css/*.css",
+        "./src/img/*.{png, jpg, gif}",
+        "./src/js/*.js"
     ];
 
     browserSync.init(files, {
         server: {
-            baseDir: "./"
+            baseDir: "./src/"
         }
     });
 };
 
+//Deletes dist directory
 function clean(){
     return del(['dist']);
 };
 
+//Copy fontawesome fonts
 function copyFonts(){
     return src('node_modules/@fortawesome/fontawesome-free/webfonts/*.{ttf,woff,eof,svg}*')
    .pipe(dest('./dist/fonts'));
 }
 
+//Compress images. Output saved to dist directory
 function imageMin(){
-    return src('img/*.{png, jpg, gif}')
+    return src('src/img/*.{png, jpg, gif}')
             .pipe(imagemin({
                 optimizationLevel: 3,
                 progressive: true,
@@ -57,8 +65,9 @@ function imageMin(){
             .pipe(dest('dist/img'));
 };
 
+//Minify html, css, js and concatenate each. Output saved to dist directory with each version code.
 function useMin(){
-    return src('./*.html')
+    return src('./src/*.html')
             .pipe(flatmap(function(stream, file){
                 return stream
                         .pipe(usemin({
@@ -85,7 +94,9 @@ function useMin(){
             .pipe(dest('dist/'));
 };
 
-exports.sassCompile = sassC;
-exports.build = series(copyFonts, imageMin, useMin);
-exports.default = series(browsersync,watchSass);
+
+//Gulp commands
+exports.sassCompile = sassC;                                //Compile scss
+exports.build = series(clean, copyFonts, imageMin, useMin); //Recreate dist directory for deployment
+exports.default = parallel(browsersync,watchSass);          //Auto reload and compile on save while development
   

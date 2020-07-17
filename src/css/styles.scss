@@ -1,10 +1,13 @@
 .social-card {
-    height: 400px;
-    overflow: hidden;
     .interact{
-        height: 400px;
+        max-height: min-content;
+        overflow: hidden;
+        img{
+            max-height: inherit;    
+        }
         .comments{
-            height: 300px;
+            max-height: inherit;
+            height: 450px;
             overflow-y: scroll;
         }
     }
@@ -51,6 +54,57 @@
             }
         }
         
+    }
+}
+
+@media only screen and (max-width: 1024px){
+    .social-card {
+        .interact{
+            max-height: min-content;
+            overflow: hidden;
+            img{
+                max-height: inherit;    
+            }
+            .comments{
+                max-height: inherit;
+                height: 280px;
+                overflow-y: scroll;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1280px){
+    .social-card {
+        .interact{
+            max-height: min-content;
+            overflow: hidden;
+            img{
+                max-height: inherit;    
+            }
+            .comments{
+                max-height: inherit;
+                height: 370px;
+                overflow-y: scroll;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 690px){
+    .social-card {
+        .interact{
+            max-height: min-content;
+            overflow: hidden;
+            img{
+                max-height: inherit;    
+            }
+            .comments{
+                max-height: inherit;
+                height: 200px;
+                overflow-y: scroll;
+            }
+        }
     }
 }
 

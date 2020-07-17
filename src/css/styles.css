@@ -9,12 +9,13 @@
     overflow-y: scroll; }
 
 .sidebar {
-  border-right: 1px solid gray;
   height: fit-content; }
   .sidebar .profiles {
     height: 75vh;
     overflow-y: scroll;
     overflow-x: hidden; }
+  .sidebar .option-title {
+    font-size: 30px; }
 
 .conversations {
   height: fit-content; }

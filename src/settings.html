@@ -27,12 +27,69 @@
             <div class="navbar-nav ml-auto">
                 <a class="nav-item nav-link" href="./index.html"><i class="fas fa-home"></i> Home </a>
                 <a class="nav-item nav-link" href="./messages.html"><i class="fas fa-comment"></i> Messages</a>
-                <a class="nav-item nav-link active" href="./profile.html"><i class="fas fa-user"></i> Profile</a>
-                <a class="nav-item nav-link" href="#"><i class="fas fa-cog"></i> Settings<span
+                <a class="nav-item nav-link" href="./profile.html"><i class="fas fa-user"></i> Profile</a>
+                <a class="nav-item nav-link active" href="#"><i class="fas fa-cog"></i> Settings<span
                     class="sr-only">(current)</span></a>
             </div>
         </div>
     </nav>
+
+    <div class="container-fluid px-5">
+        <div class="row">
+            <div class="sidebar col-12 col-md-4">
+                <div class="display-4 mt-4 mb-5">Settings</div>
+                <div class="options">
+                    <div class="option-title my-5">Profile</div>
+                    <div class="option-title my-5">Notifications</div>
+                    <div class="option-title my-5">Privacy</div>
+                    <div class="option-title my-5">Security</div>
+                    <div class="option-title my-5">Account</div>
+                </div>
+            </div>
+            <div class="conversations col-12 col-md-8 my-4">
+                <div class="row">
+                    <div class="selected-option-title display-4 col-12 mb-5">Profile</div>
+                    <div class="col-6">
+                        <form>
+                            <div class="form-group row">
+                                <label for="firstname" class="col-md-4 col-form-label">First Name</label>
+                                <div class="col-md-8">
+                                    <input type="text" class="form-control" id="firstname" name="firstname" placeholder="First Name">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="lastname" class="col-md-4 col-form-label">Last Name</label>
+                                <div class="col-md-8">
+                                    <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Last Name">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="telnum" class="col-12 col-md-4 col-form-label">Contact Tel.</label>
+                                <div class="col-10 col-md-8">
+                                    <input type="tel" class="form-control" id="telnum" name="telnum" placeholder="Tel. number">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="emailid" class="col-md-4 col-form-label">Email</label>
+                                <div class="col-md-8">
+                                    <input type="email" class="form-control" id="emailid" name="emailid" placeholder="Email">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-md-12 text-center">
+                                    <button type="submit" class="btn btn-primary">Save</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-6 text-center">
+                        <img src="./img/Grey_full.png" class="rounded-circle" width="200px" height="200px" alt="..."></br>
+                        <div class="btn btn-primary btn-small mt-3">Change Profile Picture</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- build:js js/main.js -->
     <!-- JQuery JS -->

@@ -3,9 +3,54 @@
     overflow: hidden;
     .interact{
         height: 400px;
-    }
-    .comments{
-        height: 300px;
-        overflow-y: scroll;
+        .comments{
+            height: 300px;
+            overflow-y: scroll;
+        }
     }
 }
+
+.sidebar{
+    border-right: 1px solid gray;
+    height: fit-content;
+    .profiles{
+        height: 75vh;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+}
+
+.conversations{
+    height: fit-content;
+    .chat{
+        height: 70vh;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+    .receive-bubble, .send-bubble{
+        height: fit-content;
+        color: white;        
+    }
+    .receive-message, .send-message {
+        border-radius: 20px;
+    }
+} 
+
+@media only screen and (max-width: 600px){
+    .social-card {
+        height: fit-content;
+        .interact{
+            height: fit-content;
+            .comments{
+                height: fit-content;
+            }
+            .actions .card-title{
+                display: inline-block;
+                margin-left: 8px;
+                margin-top: 10px;
+            }
+        }
+        
+    }
+}
+

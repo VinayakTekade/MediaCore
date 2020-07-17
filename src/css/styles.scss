@@ -1,0 +1,11 @@
+.social-card {
+    height: 400px;
+    overflow: hidden;
+    .interact{
+        height: 400px;
+    }
+    .comments{
+        height: 300px;
+        overflow-y: scroll;
+    }
+}

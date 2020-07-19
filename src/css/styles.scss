@@ -50,10 +50,12 @@
         }
         .receive-bubble, .send-bubble{
             height: fit-content;
-            color: white;        
+            color: white; 
+            margin: 0 15px;  
         }
         .receive-message, .send-message {
             border-radius: 20px;
+            max-width: 50vw;
         }
         .send-input{
             height: 10vh;

@@ -33,9 +33,11 @@
       overflow-x: hidden; }
     .messages-window .conversations .receive-bubble, .messages-window .conversations .send-bubble {
       height: fit-content;
-      color: white; }
+      color: white;
+      margin: 0 15px; }
     .messages-window .conversations .receive-message, .messages-window .conversations .send-message {
-      border-radius: 20px; }
+      border-radius: 20px;
+      max-width: 50vw; }
     .messages-window .conversations .send-input {
       height: 10vh; }
 

@@ -2,112 +2,127 @@
     .interact{
         max-height: min-content;
         overflow: hidden;
+
         img{
-            max-height: inherit;    
+            // max-height: 450px;
+            height: 30vw;
         }
         .comments{
-            max-height: inherit;
-            height: 450px;
+            // max-height: 450px;
+            height: 30vw;
             overflow-y: scroll;
         }
     }
 }
 
-.sidebar{
-    height: fit-content;
-    .profiles{
-        height: 75vh;
-        overflow-y: scroll;
-        overflow-x: hidden;
+.messages-window{
+    height: 92vh;
+    overflow: hidden;
+    .sidebar{
+        height: 92vh;
+        overflow: hidden;
+        .profiles{
+            height: 80vh;
+            overflow-y: scroll;
+            overflow-x: hidden;
+        }
+        .option-title{
+            font-size: 30px;
+        }
     }
-    .option-title{
-        font-size: 30px;
-    }
+    
+    .conversations{
+        height: 92vh;
+        overflow: hidden;
+        .convo-title{
+            height: 10vh;
+        }
+        .chat{
+            height: 70vh;
+            overflow-y: scroll;
+            overflow-x: hidden;
+        }
+        .receive-bubble, .send-bubble{
+            height: fit-content;
+            color: white;        
+        }
+        .receive-message, .send-message {
+            border-radius: 20px;
+        }
+        .send-input{
+            height: 10vh;
+        }
+    } 
+
 }
 
-.conversations{
-    height: fit-content;
-    .chat{
-        height: 70vh;
-        overflow-y: scroll;
-        overflow-x: hidden;
-    }
-    .receive-bubble, .send-bubble{
-        height: fit-content;
-        color: white;        
-    }
-    .receive-message, .send-message {
-        border-radius: 20px;
-    }
-} 
 
-
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 767px){
     .social-card {
         height: fit-content;
         .interact{
             height: fit-content;
+            img{
+                height: auto;
+            }
             .comments{
                 height: fit-content;
+                padding: 0 5px;
             }
             .actions .card-title{
                 display: inline-block;
-                margin-left: 8px;
-                margin-top: 10px;
+                margin-left: 1vh;
+                // margin-top: 10px;
             }
         }
         
     }
-}
 
-@media only screen and (max-width: 1024px){
-    .social-card {
-        .interact{
-            max-height: min-content;
+    .messages-window{
+        height: fit-content;
+        overflow: hidden;
+        .sidebar{
+            height: fit-content;
             overflow: hidden;
-            img{
-                max-height: inherit;    
-            }
-            .comments{
-                max-height: inherit;
-                height: 280px;
+            .profiles{
+                height: 80vh;
                 overflow-y: scroll;
+                overflow-x: hidden;
+            }
+            .option-title{
+                font-size: 30px;
             }
         }
+        
+        .conversations{
+            height: 100vh;
+            .convo-title{
+                height: 10vh;
+            }
+            .chat{
+                height: 80vh;
+                overflow-y: scroll;
+                overflow-x: hidden;
+            }
+            .receive-bubble, .send-bubble{
+                height: fit-content;
+                color: white;        
+            }
+            .receive-message, .send-message {
+                border-radius: 20px;
+            }
+            .send-input{
+                height: 8vh;
+            }
+        } 
+    
     }
+
+    .user-profile{
+        text-align: center;
+    }
+
+    
 }
 
-@media only screen and (max-width: 1280px){
-    .social-card {
-        .interact{
-            max-height: min-content;
-            overflow: hidden;
-            img{
-                max-height: inherit;    
-            }
-            .comments{
-                max-height: inherit;
-                height: 370px;
-                overflow-y: scroll;
-            }
-        }
-    }
-}
-
-@media only screen and (max-width: 690px){
-    .social-card {
-        .interact{
-            max-height: min-content;
-            overflow: hidden;
-            img{
-                max-height: inherit;    
-            }
-            .comments{
-                max-height: inherit;
-                height: 200px;
-                overflow-y: scroll;
-            }
-        }
-    }
-}
 

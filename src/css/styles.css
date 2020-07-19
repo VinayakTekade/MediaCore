@@ -2,74 +2,79 @@
   max-height: min-content;
   overflow: hidden; }
   .social-card .interact img {
-    max-height: inherit; }
+    height: 30vw; }
   .social-card .interact .comments {
-    max-height: inherit;
-    height: 450px;
+    height: 30vw;
     overflow-y: scroll; }
 
-.sidebar {
-  height: fit-content; }
-  .sidebar .profiles {
-    height: 75vh;
-    overflow-y: scroll;
-    overflow-x: hidden; }
-  .sidebar .option-title {
-    font-size: 30px; }
+.messages-window {
+  height: 92vh;
+  overflow: hidden; }
+  .messages-window .sidebar {
+    height: 92vh;
+    overflow: hidden; }
+    .messages-window .sidebar .profiles {
+      height: 80vh;
+      overflow-y: scroll;
+      overflow-x: hidden; }
+    .messages-window .sidebar .option-title {
+      font-size: 30px; }
+  .messages-window .conversations {
+    height: 92vh;
+    overflow: hidden; }
+    .messages-window .conversations .convo-title {
+      height: 10vh; }
+    .messages-window .conversations .chat {
+      height: 70vh;
+      overflow-y: scroll;
+      overflow-x: hidden; }
+    .messages-window .conversations .receive-bubble, .messages-window .conversations .send-bubble {
+      height: fit-content;
+      color: white; }
+    .messages-window .conversations .receive-message, .messages-window .conversations .send-message {
+      border-radius: 20px; }
+    .messages-window .conversations .send-input {
+      height: 10vh; }
 
-.conversations {
-  height: fit-content; }
-  .conversations .chat {
-    height: 70vh;
-    overflow-y: scroll;
-    overflow-x: hidden; }
-  .conversations .receive-bubble, .conversations .send-bubble {
-    height: fit-content;
-    color: white; }
-  .conversations .receive-message, .conversations .send-message {
-    border-radius: 20px; }
-
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 767px) {
   .social-card {
     height: fit-content; }
     .social-card .interact {
       height: fit-content; }
+      .social-card .interact img {
+        height: auto; }
       .social-card .interact .comments {
-        height: fit-content; }
+        height: fit-content;
+        padding: 0 5px; }
       .social-card .interact .actions .card-title {
         display: inline-block;
-        margin-left: 8px;
-        margin-top: 10px; } }
-
-@media only screen and (max-width: 1024px) {
-  .social-card .interact {
-    max-height: min-content;
+        margin-left: 1vh; }
+  .messages-window {
+    height: fit-content;
     overflow: hidden; }
-    .social-card .interact img {
-      max-height: inherit; }
-    .social-card .interact .comments {
-      max-height: inherit;
-      height: 280px;
-      overflow-y: scroll; } }
-
-@media only screen and (max-width: 1280px) {
-  .social-card .interact {
-    max-height: min-content;
-    overflow: hidden; }
-    .social-card .interact img {
-      max-height: inherit; }
-    .social-card .interact .comments {
-      max-height: inherit;
-      height: 370px;
-      overflow-y: scroll; } }
-
-@media only screen and (max-width: 690px) {
-  .social-card .interact {
-    max-height: min-content;
-    overflow: hidden; }
-    .social-card .interact img {
-      max-height: inherit; }
-    .social-card .interact .comments {
-      max-height: inherit;
-      height: 200px;
-      overflow-y: scroll; } }
+    .messages-window .sidebar {
+      height: fit-content;
+      overflow: hidden; }
+      .messages-window .sidebar .profiles {
+        height: 80vh;
+        overflow-y: scroll;
+        overflow-x: hidden; }
+      .messages-window .sidebar .option-title {
+        font-size: 30px; }
+    .messages-window .conversations {
+      height: 100vh; }
+      .messages-window .conversations .convo-title {
+        height: 10vh; }
+      .messages-window .conversations .chat {
+        height: 80vh;
+        overflow-y: scroll;
+        overflow-x: hidden; }
+      .messages-window .conversations .receive-bubble, .messages-window .conversations .send-bubble {
+        height: fit-content;
+        color: white; }
+      .messages-window .conversations .receive-message, .messages-window .conversations .send-message {
+        border-radius: 20px; }
+      .messages-window .conversations .send-input {
+        height: 8vh; }
+  .user-profile {
+    text-align: center; } }

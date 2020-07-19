@@ -69,10 +69,12 @@
                 height: fit-content;
                 padding: 0 5px;
             }
-            .actions .card-title{
-                display: inline-block;
-                margin-left: 1vh;
-                // margin-top: 10px;
+            
+            .actions-panel{
+                .action{
+                    display: inline-block;
+                    margin-left: 8px;  
+                }
             }
         }
         

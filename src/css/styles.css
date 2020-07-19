@@ -46,9 +46,9 @@
       .social-card .interact .comments {
         height: fit-content;
         padding: 0 5px; }
-      .social-card .interact .actions .card-title {
+      .social-card .interact .actions-panel .action {
         display: inline-block;
-        margin-left: 1vh; }
+        margin-left: 8px; }
   .messages-window {
     height: fit-content;
     overflow: hidden; }

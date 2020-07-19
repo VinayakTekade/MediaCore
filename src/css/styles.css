@@ -3,6 +3,9 @@
   overflow: hidden; }
   .social-card .interact img {
     height: 30vw; }
+  .social-card .interact .actions-panel .action {
+    display: block;
+    cursor: pointer; }
   .social-card .interact .comments {
     height: 30vw;
     overflow-y: scroll; }
